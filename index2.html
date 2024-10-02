@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:4em
+
+        }
+        .trans,.trans1,.trans2,.trans3,.trans4{
+            background-color: aqua;
+            width: 40%;
+            height: 20vh;
+            margin-left: 6em;
+        }
+        .tran:hover~.trans{
+            display: block;
+            transform: translate(200px);
+            transition-duration: 2s;
+            cursor: pointer;
+        }
+        .tran,.tran1,.tran2,.tran3{
+            font-size: 30px;
+            letter-spacing: 3px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .tran1:hover~.trans{
+            transform: rotate(180deg);
+            display: block;
+            transition-duration: 2s;
+        }
+        .tran2:hover~.trans{
+            transform: scale(1.3);
+            display: block;
+            transition-duration: 2s;
+        }
+        .tran3:hover~.trans{
+            transform: skew(20deg);
+            display: block;
+            transition-duration: 2s;
+        }
+        .tran:hover~.trans1{
+            display: block;
+            transform: translateY(200px);
+            transition-duration: 2s;
+            cursor: pointer;
+        }
+        .tran1:hover~.trans2{
+            transform: rotateY(180deg);
+            display: block;
+            transition-duration: 2s;
+        }
+        .tran2:hover~.trans3{
+            transform: scale(0.5);
+            display: block;
+            transition-duration: 2s;
+        }
+        .tran3:hover~.trans4{
+            transform: skew(-40deg);
+            display: block;
+            transition-duration: 2s;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="navbar1">
+        <div class="tran">Translate(X-axis)</div>
+        <br>
+        <br>
+        <br>
+
+        <div class="trans"></div>
+    </div>
+    <div class="navbar2">
+        <div class="tran1"> rotate(clockwise) </div>
+        <br>
+        <br><br>
+        <div class="trans"></div>
+    </div>
+    <div class="navbar3">
+        <div class="tran2"> Scale(up)</div>
+        <br><br><br>
+        <div class="trans"></div>
+    </div>
+    <div class="navbar4">
+        <div class="tran3"> Skew(X)</div>
+        <br><br><br>
+        <div class="trans"></div>
+    </div>
+</nav>
+<br><br><br><br><br><br>
+<nav>
+    <div class="navbar1">
+        <div class="tran">Translate(y)</div>
+        <br>
+        <br>
+        <br>
+
+        <div class="trans1"></div>
+    </div>
+    <div class="navbar2">
+        <div class="tran1"> rotate(Y) </div>
+        <br>
+        <br><br>
+        <div class="trans2"></div>
+    </div>
+    <div class="navbar3">
+        <div class="tran2"> Scale(down) </div>
+        <br><br><br>
+        <div class="trans3"></div>
+    </div>
+    <div class="navbar4">
+        <div class="tran3"> Skew(y)</div>
+        <br><br><br>
+        <div class="trans4"></div>
+    </div>
+
+
+    </nav>
+</body>
+</html>
